@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JS仿miui论坛公告点击切换，不自动滚动，带分享 - 港港网络</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">    
+    <link rel="stylesheet" type="text/css" href="css/jcalculator.css" media="screen">
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="px/icon.png" />
+        <h1>JS仿miui论坛公告</h1>
+        <h2>点击切换，不自动滚动，带分享到新浪微博QQ空间腾讯微博</h2>
+    </div>
+
+
+    <div class="demonstration">
+        <div class="container">
+            <h2>Demonstration</h2>            
+            <div class="mn">
+			    <!-- 代码 开始 -->
+                        <style type="text/css">
+.motto{height:43px;line-height:43px; border:1px solid #e6e6e6;background:#ffffff;color:#909090; border-radius:5px;margin:0 0 10px 0;overflow: hidden;}
+.motto span{ float:left;}
+.motto a{ 
+color: #444; text-decoration: none;}
+.motto a:hover{ text-decoration: none; color:#ff6f3d;}
+#motto{max-width: 495px;display: inline-block;overflow: hidden;}
+#pt #motto {margin-right: 0;height: 22px;margin-top: 14px; line-height: 22px;}
+#mottoImg {position: absolute; visibility: hidden;z-index: 100;}
+#innerImg{width:200px;}
+.motto_title{float:left;color:#4d4d4d;font-size: 12px;padding-left: 10px;}
+.motto_refresh_btn{float:left;margin: 10px 5px auto 0;height: 22px;width:22px;background:url(http://static.bbs.miui.com/static/image/miui/base/imghack.png) 0 -48px no-repeat;}
+        .motto_refresh_btn:hover{background-position-x: -28px;}
+.motto_share{height: 16px;width: 16px;float:right;background: url(http://static.bbs.miui.com/static/image/miui/base/imghack.png) 0 -23px; }
+                        </style>
+                        <div class="motto">                         
+                                <!--MIUI语录显示-->
+                                <span class="motto_title">每日语录：</span>
+                                <a class="motto_refresh_btn" href="javascript:;" onclick='_gaq.push(["_trackEvent", "shareclick", "refreshMotto","C3"]);refreshMotto(this)' >&nbsp;</a>
+                                <a target="_blank" id="motto" href="http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=62342715" ></a>
+					<input type="hidden" id="motto_pic" value="http://attach.bbs.miui.com/album/201408/13/231906xw1dxhyz9k1wkf59.jpg">
+					<input type="hidden" id="motto_content" value="MIUI 四周年，816与你轻装再出发！——蘑菇面包">                        
+                                <a href="javascript:;" class="motto_share" title="分享到QQ空间"  onclick='_gaq.push(["_trackEvent", "shareclick", "qzone","C1"]);shareMotto("qzone")' style="margin:13px 10px 0 5px;background-position: -21px -23px;"></a>
+                                <a href="javascript:;" class="motto_share" title="分享到腾讯微博"  onclick='_gaq.push(["_trackEvent", "shareclick", "qq","C2"]);shareMotto("qq")' style="margin: 13px 0px 0 5px;background-position: -42px  -23px;"></a>
+                                <a href="javascript:;" class="motto_share" title="分享到新浪微博" onclick='_gaq.push(["_trackEvent", "shareclick", "sina","C1"]);shareMotto("sina")' style="margin:13px 0 0 5px;background-position-x: 0px;"></a>
+                                <span style="float:right;">分享</span>
+<div id="mottoImg" ><img id="innerImg"  src="" /></div>
+                        </div>
+<script type="text/javascript">var mottoData = {'0':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=62342715','content':'MIUI 四周年，816与你轻装再出发！——蘑菇面包','pic':'http://attach.bbs.miui.com/album/201408/13/231906xw1dxhyz9k1wkf59.jpg'}],'1':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=29895205','content':'当你再也没有什么可以失去的时候，就是你开始得到的时候。——我有压力','pic':'http://attach.bbs.miui.com/forum/201307/24/175142z4ofof7cwt77yc8l.png.thumb.jpg'}],'2':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=39009698','content':'也许是时光越老，人心越淡，走着走着便忘记了曾经。——渺渺望水','pic':'http://attach.bbs.miui.com/album/201402/12/161807lukb9h1mvk1bcpi6.jpg'}],'3':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=33491801','content':'为了面子坚持错误是最没有面子的事情。——益达宝贝','pic':'http://attach.bbs.miui.com/forum/201310/14/171956ueyccm01x9xarr1x.png.thumb.jpg'}],'4':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=19477270','content':'生命可以随心所欲，但不能随波逐流。——twisted','pic':'http://attach.bbs.miui.com/forum/201212/10/201109khbqmkf02s900a92.png.thumb.jpg'}],'5':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=55860139','content':'只有先改变自己的态度， 才能改变人生的高度。——一种思绪丶','pic':'http://attach.bbs.miui.com/album/201407/14/195639du3cm2wkp3ompyrl.jpg'}],'6':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=18716444','content':'路的好坏不在于崎岖多少， 只在于谁能最终达到目标。   -shaanxi029','pic':'http://attach.bbs.miui.com/forum/201211/24/171134xblljxnolnlj022o.png'}],'7':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=14888547','content':'生命虽然不能打蝴蝶结，但它仍然不失为一份礼物。 -妇女先疯队','pic':'http://attach.bbs.miui.com/forum/201208/30/230452yuiync1y65y56pu8.png'}],'8':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=17760276','content':'多么希望人生能有快进键，让我看看你是否值得等待。   -小米菜','pic':'http://attach.bbs.miui.com/forum/201211/01/203602alb3auqbhh23ntaf.png'}],'9':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=25420695','content':'笑笑更健康，身体倍儿棒，吃嘛嘛香~  —米二姐','pic':'http://attach.bbs.miui.com/album/201304/11/144526bl7najohu358u25i.png'}],'10':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=17421414','content':'使你疲劳的不是远方的高山，而是鞋里的一粒沙。  -米二姐','pic':'http://attach.bbs.miui.com/forum/201210/25/203922vmfkzrmzxxz2fk5k.jpg'}],'11':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=35448913','content':'冬天来了，你身边的暖脚器都配备好了没？——咔咔的一笑','pic':'http://attach.bbs.miui.com/forum/201312/03/183738ksedkq8i08x0oe22.png.thumb.jpg'}],'12':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=31144263','content':'你的过去我来不及参与，你的未来我奉陪到底。——蕃茄熟了','pic':'http://attach.bbs.miui.com/forum/201308/23/205524c3dlui766x47i9ll.png.thumb.jpg'}],'13':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=26634927','content':'妈妈，我爱您','pic':'http://attach.bbs.miui.com/album/201305/10/101148cbhiaeab7l67di67.gif'}],'14':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=26996848','content':'每个人真正强大起来都要度过一段没人帮忙，没人支持的日子。—慢慢123','pic':'http://attach.bbs.miui.com/album/201305/17/180519ppoqpthj2wkjr0qp.png'}],'15':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=18017429','content':'总有未知的要等待，总有值得的要期待。   -妇女先疯队','pic':'http://attach.bbs.miui.com/forum/201211/07/195319esmx9egox1xx9oss.png'}],'16':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=29949227','content':'时光，浓淡相宜；人心，远近相安。这就是最好的生活。——蕃茄熟了','pic':'http://attach.bbs.miui.com/forum/201307/25/171346ord5h4wr605m4e74.png'}],'17':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=36781907','content':'20不努力，30做助理，40做助理，50做助理······ ——twisted','pic':'http://attach.bbs.miui.com/forum/201312/30/205040bgmnfalnt4fabnmp.png.thumb.jpg'}],'18':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=19708197','content':'有一种思念叫望穿秋水，有一种寒冷叫忘穿秋裤…… -shaanxi029','pic':'http://attach.bbs.miui.com/album/201212/14/154933sabsbewqtiqbzezt.png'}],'19':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=61578427','content':'有梦想就去捍卫它，人的梦想是不会终止的。——黑大帅、','pic':'http://attach.bbs.miui.com/album/201408/08/204433lreqe8315881v1a1.jpg'}],'20':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=21508478','content':'如果你不知道你将要去往何方，那你就无所谓是否迷路。—雪飘云间','pic':'http://attach.bbs.miui.com/album/201301/25/172311nt24k1nznx9znp3n.png'}],'21':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=26997154','content':'当你打算放弃梦想时，再多撑一天吧。你会发现，拒绝退场的结果多么美好。—小贝的故事','pic':'http://attach.bbs.miui.com/album/201305/20/205637gnksm89nuy93nt8u.png'}],'22':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=57320579','content':'人生不可能总是顺心如意，但持续朝着阳光走，影子就会躲在后面。——qqa888','pic':'http://attach.bbs.miui.com/album/201408/01/225510vvuknnzrgu4zlu4g.jpg'}],'23':[{'href':'http://www.miui.com/forum.php?mod=viewthread&tid=7094&page=373&extra=#pid15553495','content':'想一千次，不如去做一次。华丽的跌倒，胜过无谓的徘徊。  -2010的猫儿','pic':'http://attach.bbs.miui.com/forum/201209/13/213023brqfoxlatcqotgoj.png'}],'24':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=22296327','content':'好朋友就是我们自己选择的家人。      -shaanxi029','pic':'http://attach.bbs.miui.com/album/201302/07/120325tocqvotvs3rqyaws.png'}],'25':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=32957996','content':'心智上，我如出家僧；行为上，我是享乐主义者。——咔咔的一笑','pic':'http://attach.bbs.miui.com/forum/201309/30/170141prxlsrqujue7eri3.png.thumb.jpg'}],'26':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=51332895','content':'你简单，世界就是童话；心复杂，世界就是迷宫。——diors-man','pic':'http://attach.bbs.miui.com/album/201407/07/121059wuy19hbr2xhblrzb.jpg'}],'27':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=56082181','content':'世界的精彩，在于追逐梦想路上的点点滴滴。——1298465933','pic':'http://attach.bbs.miui.com/album/201407/15/183829mwowwwrzwtfomuwo.jpg'}],'28':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=35712923','content':'万人追不如一人疼，万人宠不如一人懂。——香蕉不是苹果','pic':'http://attach.bbs.miui.com/forum/201312/10/175839zjjzjbb7pz47n100.png.thumb.jpg'}]};
+
+
+
+
+/*title是标题，rLink链接，summary内容，site分享来源，pic分享图片路径*/
+function shareMotto(type){
+//        title,rLink,site,pic
+        titleObj = document.getElementById("motto_content");
+        title = "#MIUI每日语录#：" + titleObj.getAttribute("value");
+        picObj = document.getElementById("motto_pic");
+        pic = picObj.getAttribute("value");
+        rLink = "http://www.miui.com/index.php";
+        site = "4111133438";
+        if(type == "sina"){
+                window.open('http://service.weibo.com/share/share.php?title='+encodeURIComponent(title)+'&url='+encodeURIComponent(rLink)+'&appkey='+encodeURIComponent(site)+'&pic='+encodeURIComponent(pic),'_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes');
+        }else if(type == "qq"){
+                window.open('http://share.v.t.qq.com/index.php?c=share&a=index&f=q2&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(rLink)+'&appkey=801188627'+encodeURIComponent(site)+'&pic='+encodeURIComponent(pic),'_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes');
+        }else if(type == "qzone"){
+                window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?title='+encodeURIComponent('MIUI每日语录')+ '&summary='+encodeURIComponent(titleObj.getAttribute("value"))+'&site=801188627&style="width:30px,height:22px"' + '&url='+encodeURIComponent(rLink)+'&pics='+encodeURIComponent(pic),'_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes');
+        }
+}
+var _gaq = _gaq || [];
+
+function refreshMotto(obj){
+        obj.blur();
+        id = rand(696) % 29;
+        var data=mottoData;        
+        titleObj = document.getElementById("motto");
+        picObj = document.getElementById("motto_pic");
+        contentObj = document.getElementById("motto_content");
+        
+        title = data[id][0].content;
+        contentObj.setAttribute("value", title);
+        if(len(title) >80)
+        {
+                i = 0;l= 0;subTitle ='';
+                while(l<80){
+                         if (title[i].charCodeAt(0)<299) {
+                                l++;
+                        } else {
+                                l+=2;
+                        }
+                        subTitle +=title[i];
+                        i++;
+                }                
+                title = subTitle + "11...";
+        }
+        titleObj.innerHTML = title;
+        titleObj.setAttribute("href", data[id][0].href); 
+        picObj.setAttribute("value", data[id][0].pic);
+        refreshImg = "<img id='innerImg'   src='" + data[id][0].pic + "' />"
+        document.getElementById("mottoImg").innerHTML = refreshImg;
+}
+
+rnd.today=new Date();
+rnd.seed=rnd.today.getTime();
+function rnd() {
+　　　　rnd.seed = (rnd.seed*9301+49297) % 233280;
+　　　　return rnd.seed/(233280.0);
+};
+function rand(number) {
+　　　　return Math.ceil(rnd()*number);
+};
+function len(s) {
+        var l = 0;
+        var a = s.split("");
+        for (var i=0;i<a.length; i++) {
+                if (a[i].charCodeAt(0)<299) {
+                        l++;
+                } else {
+                        l+=2;
+                }
+        }
+        return l;
+}
+
+function showImg(x, y){
+         var img = document.getElementById("mottoImg");
+        img.style.visibility="visible";
+        img.style.left=(x - 100) + "px";
+        img.style.top=(y + 15) + "px";
+};
+
+var getCoordInDocument = function(e) {        
+        e = e || window.event;
+        var x;
+        var y;
+        if(e.clientX){
+                x = e.clientX + (document.documentElement.scrollLeft  || document.body.scrollLeft);
+                y = e.clientY + (document.documentElement.scrollLeft  || document.body.scrollLeft);
+        }else{
+               x = e.pageX ;
+               y = e.pageY ;
+        }
+//        var y= e.pageY || (e.clientY +  (document.documentElement.scrollTop  || document.body.scrollTop));
+        return {'x':x,'y':y};
+};
+
+(function(){        
+        
+        titleObj = document.getElementById("motto_content");
+        title = titleObj.getAttribute("value");        
+        
+        if(len(title) >80)
+        {
+                i = 0;l= 0;subTitle ='';
+                while(l<77){
+                         if (title[i].charCodeAt(0)<299) {
+                                l++;
+                        } else {
+                                l+=2;
+                        }
+                        subTitle +=title[i];
+                        i++;
+                }
+                
+                title = subTitle + "...";
+        }
+        document.getElementById("motto").innerHTML=title;        
+        var timeTick;
+        aLink = document.getElementById("motto");
+        aLink.onmouseover = function(e){
+                var pointer = getCoordInDocument(e);
+                timeTick = setTimeout(function(){showImg(pointer.x ,pointer.y); }, 3000);                
+        };
+        aLink.onmousemove = function(e){
+                var img = document.getElementById("mottoImg");
+                var pointer = getCoordInDocument(e);
+                img.style.left=(pointer.x - 100) + "px";
+                img.style.top=(pointer.y + 20) + "px";
+        };
+        aLink.onmouseout = function(){
+                var img = document.getElementById("mottoImg");
+                img.style.visibility="hidden";
+                clearTimeout(timeTick);
+        };
+        var defaultPic = document.getElementById("motto_pic").getAttribute("value");
+        document.getElementById("innerImg").setAttribute("src",defaultPic);
+})();
+
+</script> 
+  <!-- 代码 结束 -->          
+        </div>
+    </div>
+
+
+    <div class="container" id="content">
+        <h2>How to install</h2>
+<pre class="brush: css;">
+.motto{height:43px;line-height:43px; border:1px solid #e6e6e6;background:#ffffff;color:#909090; border-radius:5px;margin:0 0 10px 0;overflow: hidden;}
+.motto span{ float:left;}
+.motto a{ 
+color: #444; text-decoration: none;}
+.motto a:hover{ text-decoration: none; color:#ff6f3d;}
+#motto{max-width: 495px;display: inline-block;overflow: hidden;}
+#pt #motto {margin-right: 0;height: 22px;margin-top: 14px; line-height: 22px;}
+#mottoImg {position: absolute; visibility: hidden;z-index: 100;}
+#innerImg{width:200px;}
+.motto_title{float:left;color:#4d4d4d;font-size: 12px;padding-left: 10px;}
+.motto_refresh_btn{float:left;margin: 10px 5px auto 0;height: 22px;width:22px;background:url(http://static.bbs.miui.com/static/image/miui/base/imghack.png) 0 -48px no-repeat;}
+        .motto_refresh_btn:hover{background-position-x: -28px;}
+.motto_share{height: 16px;width: 16px;float:right;background: url(http://static.bbs.miui.com/static/image/miui/base/imghack.png) 0 -23px; }
+</pre>
+<p>2. HTML代码</p>
+
+<pre class="brush: php;">
+                       <div class="motto">                         
+                                <!--MIUI语录显示-->
+                                <span class="motto_title">每日语录：</span>
+                                <a class="motto_refresh_btn" href="javascript:;" onclick='_gaq.push(["_trackEvent", "shareclick", "refreshMotto","C3"]);refreshMotto(this)' >&nbsp;</a>
+                                <a target="_blank" id="motto" href="http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=62342715" ></a>
+					<input type="hidden" id="motto_pic" value="http://attach.bbs.miui.com/album/201408/13/231906xw1dxhyz9k1wkf59.jpg">
+					<input type="hidden" id="motto_content" value="MIUI 四周年，816与你轻装再出发！——蘑菇面包">                        
+                                <a href="javascript:;" class="motto_share" title="分享到QQ空间"  onclick='_gaq.push(["_trackEvent", "shareclick", "qzone","C1"]);shareMotto("qzone")' style="margin:13px 10px 0 5px;background-position: -21px -23px;"></a>
+                                <a href="javascript:;" class="motto_share" title="分享到腾讯微博"  onclick='_gaq.push(["_trackEvent", "shareclick", "qq","C2"]);shareMotto("qq")' style="margin: 13px 0px 0 5px;background-position: -42px  -23px;"></a>
+                                <a href="javascript:;" class="motto_share" title="分享到新浪微博" onclick='_gaq.push(["_trackEvent", "shareclick", "sina","C1"]);shareMotto("sina")' style="margin:13px 0 0 5px;background-position-x: 0px;"></a>
+                                <span style="float:right;">分享</span>
+<div id="mottoImg" ><img id="innerImg"  src="" /></div>
+                        </div>
+						</pre>
+		<p>3. javascript代码</p>
+<pre class="brush: js;">var mottoData = {'0':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=62342715','content':'MIUI 四周年，816与你轻装再出发！——蘑菇面包','pic':'http://attach.bbs.miui.com/album/201408/13/231906xw1dxhyz9k1wkf59.jpg'}],'1':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=29895205','content':'当你再也没有什么可以失去的时候，就是你开始得到的时候。——我有压力','pic':'http://attach.bbs.miui.com/forum/201307/24/175142z4ofof7cwt77yc8l.png.thumb.jpg'}],'2':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=39009698','content':'也许是时光越老，人心越淡，走着走着便忘记了曾经。——渺渺望水','pic':'http://attach.bbs.miui.com/album/201402/12/161807lukb9h1mvk1bcpi6.jpg'}],'3':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=33491801','content':'为了面子坚持错误是最没有面子的事情。——益达宝贝','pic':'http://attach.bbs.miui.com/forum/201310/14/171956ueyccm01x9xarr1x.png.thumb.jpg'}],'4':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=19477270','content':'生命可以随心所欲，但不能随波逐流。——twisted','pic':'http://attach.bbs.miui.com/forum/201212/10/201109khbqmkf02s900a92.png.thumb.jpg'}],'5':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=55860139','content':'只有先改变自己的态度， 才能改变人生的高度。——一种思绪丶','pic':'http://attach.bbs.miui.com/album/201407/14/195639du3cm2wkp3ompyrl.jpg'}],'6':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=18716444','content':'路的好坏不在于崎岖多少， 只在于谁能最终达到目标。   -shaanxi029','pic':'http://attach.bbs.miui.com/forum/201211/24/171134xblljxnolnlj022o.png'}],'7':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=14888547','content':'生命虽然不能打蝴蝶结，但它仍然不失为一份礼物。 -妇女先疯队','pic':'http://attach.bbs.miui.com/forum/201208/30/230452yuiync1y65y56pu8.png'}],'8':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=17760276','content':'多么希望人生能有快进键，让我看看你是否值得等待。   -小米菜','pic':'http://attach.bbs.miui.com/forum/201211/01/203602alb3auqbhh23ntaf.png'}],'9':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=25420695','content':'笑笑更健康，身体倍儿棒，吃嘛嘛香~  —米二姐','pic':'http://attach.bbs.miui.com/album/201304/11/144526bl7najohu358u25i.png'}],'10':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=17421414','content':'使你疲劳的不是远方的高山，而是鞋里的一粒沙。  -米二姐','pic':'http://attach.bbs.miui.com/forum/201210/25/203922vmfkzrmzxxz2fk5k.jpg'}],'11':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=35448913','content':'冬天来了，你身边的暖脚器都配备好了没？——咔咔的一笑','pic':'http://attach.bbs.miui.com/forum/201312/03/183738ksedkq8i08x0oe22.png.thumb.jpg'}],'12':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=31144263','content':'你的过去我来不及参与，你的未来我奉陪到底。——蕃茄熟了','pic':'http://attach.bbs.miui.com/forum/201308/23/205524c3dlui766x47i9ll.png.thumb.jpg'}],'13':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=26634927','content':'妈妈，我爱您','pic':'http://attach.bbs.miui.com/album/201305/10/101148cbhiaeab7l67di67.gif'}],'14':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=26996848','content':'每个人真正强大起来都要度过一段没人帮忙，没人支持的日子。—慢慢123','pic':'http://attach.bbs.miui.com/album/201305/17/180519ppoqpthj2wkjr0qp.png'}],'15':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=18017429','content':'总有未知的要等待，总有值得的要期待。   -妇女先疯队','pic':'http://attach.bbs.miui.com/forum/201211/07/195319esmx9egox1xx9oss.png'}],'16':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=29949227','content':'时光，浓淡相宜；人心，远近相安。这就是最好的生活。——蕃茄熟了','pic':'http://attach.bbs.miui.com/forum/201307/25/171346ord5h4wr605m4e74.png'}],'17':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=36781907','content':'20不努力，30做助理，40做助理，50做助理······ ——twisted','pic':'http://attach.bbs.miui.com/forum/201312/30/205040bgmnfalnt4fabnmp.png.thumb.jpg'}],'18':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=19708197','content':'有一种思念叫望穿秋水，有一种寒冷叫忘穿秋裤…… -shaanxi029','pic':'http://attach.bbs.miui.com/album/201212/14/154933sabsbewqtiqbzezt.png'}],'19':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=61578427','content':'有梦想就去捍卫它，人的梦想是不会终止的。——黑大帅、','pic':'http://attach.bbs.miui.com/album/201408/08/204433lreqe8315881v1a1.jpg'}],'20':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=21508478','content':'如果你不知道你将要去往何方，那你就无所谓是否迷路。—雪飘云间','pic':'http://attach.bbs.miui.com/album/201301/25/172311nt24k1nznx9znp3n.png'}],'21':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=26997154','content':'当你打算放弃梦想时，再多撑一天吧。你会发现，拒绝退场的结果多么美好。—小贝的故事','pic':'http://attach.bbs.miui.com/album/201305/20/205637gnksm89nuy93nt8u.png'}],'22':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=57320579','content':'人生不可能总是顺心如意，但持续朝着阳光走，影子就会躲在后面。——qqa888','pic':'http://attach.bbs.miui.com/album/201408/01/225510vvuknnzrgu4zlu4g.jpg'}],'23':[{'href':'http://www.miui.com/forum.php?mod=viewthread&tid=7094&page=373&extra=#pid15553495','content':'想一千次，不如去做一次。华丽的跌倒，胜过无谓的徘徊。  -2010的猫儿','pic':'http://attach.bbs.miui.com/forum/201209/13/213023brqfoxlatcqotgoj.png'}],'24':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=22296327','content':'好朋友就是我们自己选择的家人。      -shaanxi029','pic':'http://attach.bbs.miui.com/album/201302/07/120325tocqvotvs3rqyaws.png'}],'25':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=32957996','content':'心智上，我如出家僧；行为上，我是享乐主义者。——咔咔的一笑','pic':'http://attach.bbs.miui.com/forum/201309/30/170141prxlsrqujue7eri3.png.thumb.jpg'}],'26':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=51332895','content':'你简单，世界就是童话；心复杂，世界就是迷宫。——diors-man','pic':'http://attach.bbs.miui.com/album/201407/07/121059wuy19hbr2xhblrzb.jpg'}],'27':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=56082181','content':'世界的精彩，在于追逐梦想路上的点点滴滴。——1298465933','pic':'http://attach.bbs.miui.com/album/201407/15/183829mwowwwrzwtfomuwo.jpg'}],'28':[{'href':'http://www.miui.com/forum.php?mod=redirect&goto=findpost&ptid=7094&pid=35712923','content':'万人追不如一人疼，万人宠不如一人懂。——香蕉不是苹果','pic':'http://attach.bbs.miui.com/forum/201312/10/175839zjjzjbb7pz47n100.png.thumb.jpg'}]};
+
+
+
+
+/*title是标题，rLink链接，summary内容，site分享来源，pic分享图片路径*/
+function shareMotto(type){
+//        title,rLink,site,pic
+        titleObj = document.getElementById("motto_content");
+        title = "#MIUI每日语录#：" + titleObj.getAttribute("value");
+        picObj = document.getElementById("motto_pic");
+        pic = picObj.getAttribute("value");
+        rLink = "http://www.miui.com/index.php";
+        site = "4111133438";
+        if(type == "sina"){
+                window.open('http://service.weibo.com/share/share.php?title='+encodeURIComponent(title)+'&url='+encodeURIComponent(rLink)+'&appkey='+encodeURIComponent(site)+'&pic='+encodeURIComponent(pic),'_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes');
+        }else if(type == "qq"){
+                window.open('http://share.v.t.qq.com/index.php?c=share&a=index&f=q2&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(rLink)+'&appkey=801188627'+encodeURIComponent(site)+'&pic='+encodeURIComponent(pic),'_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes');
+        }else if(type == "qzone"){
+                window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?title='+encodeURIComponent('MIUI每日语录')+ '&summary='+encodeURIComponent(titleObj.getAttribute("value"))+'&site=801188627&style="width:30px,height:22px"' + '&url='+encodeURIComponent(rLink)+'&pics='+encodeURIComponent(pic),'_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes');
+        }
+}
+var _gaq = _gaq || [];
+
+function refreshMotto(obj){
+        obj.blur();
+        id = rand(696) % 29;
+        var data=mottoData;        
+        titleObj = document.getElementById("motto");
+        picObj = document.getElementById("motto_pic");
+        contentObj = document.getElementById("motto_content");
+        
+        title = data[id][0].content;
+        contentObj.setAttribute("value", title);
+        if(len(title) >80)
+        {
+                i = 0;l= 0;subTitle ='';
+                while(l<80){
+                         if (title[i].charCodeAt(0)<299) {
+                                l++;
+                        } else {
+                                l+=2;
+                        }
+                        subTitle +=title[i];
+                        i++;
+                }                
+                title = subTitle + "11...";
+        }
+        titleObj.innerHTML = title;
+        titleObj.setAttribute("href", data[id][0].href); 
+        picObj.setAttribute("value", data[id][0].pic);
+        refreshImg = "<img id='innerImg'   src='" + data[id][0].pic + "' />"
+        document.getElementById("mottoImg").innerHTML = refreshImg;
+}
+
+rnd.today=new Date();
+rnd.seed=rnd.today.getTime();
+function rnd() {
+　　　　rnd.seed = (rnd.seed*9301+49297) % 233280;
+　　　　return rnd.seed/(233280.0);
+};
+function rand(number) {
+　　　　return Math.ceil(rnd()*number);
+};
+function len(s) {
+        var l = 0;
+        var a = s.split("");
+        for (var i=0;i<a.length; i++) {
+                if (a[i].charCodeAt(0)<299) {
+                        l++;
+                } else {
+                        l+=2;
+                }
+        }
+        return l;
+}
+
+function showImg(x, y){
+         var img = document.getElementById("mottoImg");
+        img.style.visibility="visible";
+        img.style.left=(x - 100) + "px";
+        img.style.top=(y + 15) + "px";
+};
+
+var getCoordInDocument = function(e) {        
+        e = e || window.event;
+        var x;
+        var y;
+        if(e.clientX){
+                x = e.clientX + (document.documentElement.scrollLeft  || document.body.scrollLeft);
+                y = e.clientY + (document.documentElement.scrollLeft  || document.body.scrollLeft);
+        }else{
+               x = e.pageX ;
+               y = e.pageY ;
+        }
+//        var y= e.pageY || (e.clientY +  (document.documentElement.scrollTop  || document.body.scrollTop));
+        return {'x':x,'y':y};
+};
+
+(function(){        
+        
+        titleObj = document.getElementById("motto_content");
+        title = titleObj.getAttribute("value");        
+        
+        if(len(title) >80)
+        {
+                i = 0;l= 0;subTitle ='';
+                while(l<77){
+                         if (title[i].charCodeAt(0)<299) {
+                                l++;
+                        } else {
+                                l+=2;
+                        }
+                        subTitle +=title[i];
+                        i++;
+                }
+                
+                title = subTitle + "...";
+        }
+        document.getElementById("motto").innerHTML=title;        
+        var timeTick;
+        aLink = document.getElementById("motto");
+        aLink.onmouseover = function(e){
+                var pointer = getCoordInDocument(e);
+                timeTick = setTimeout(function(){showImg(pointer.x ,pointer.y); }, 3000);                
+        };
+        aLink.onmousemove = function(e){
+                var img = document.getElementById("mottoImg");
+                var pointer = getCoordInDocument(e);
+                img.style.left=(pointer.x - 100) + "px";
+                img.style.top=(pointer.y + 20) + "px";
+        };
+        aLink.onmouseout = function(){
+                var img = document.getElementById("mottoImg");
+                img.style.visibility="hidden";
+                clearTimeout(timeTick);
+        };
+        var defaultPic = document.getElementById("motto_pic").getAttribute("value");
+        document.getElementById("innerImg").setAttribute("src",defaultPic);
+})();
+     
+</pre>
+      
+    </div>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js?ver=20131120"></script>
+	<script type="text/javascript" src="code/shCore.js"></script>
+<script type="text/javascript" src="code/shBrushBash.js"></script>
+<script type="text/javascript" src="code/shBrushCpp.js"></script>
+<script type="text/javascript" src="code/shBrushCSharp.js"></script>
+<script type="text/javascript" src="code/shBrushCss.js"></script>
+<script type="text/javascript" src="code/shBrushDelphi.js"></script>
+<script type="text/javascript" src="code/shBrushDiff.js"></script>
+<script type="text/javascript" src="code/shBrushGroovy.js"></script>
+<script type="text/javascript" src="code/shBrushJava.js"></script>
+<script type="text/javascript" src="code/shBrushJScript.js"></script>
+<script type="text/javascript" src="code/shBrushPhp.js"></script>
+<script type="text/javascript" src="code/shBrushPlain.js"></script>
+<script type="text/javascript" src="code/shBrushPython.js"></script>
+<script type="text/javascript" src="code/shBrushRuby.js"></script>
+<script type="text/javascript" src="code/shBrushScala.js"></script>
+<script type="text/javascript" src="code/shBrushSql.js"></script>
+<script type="text/javascript" src="code/shBrushVb.js"></script>
+<script type="text/javascript" src="code/shBrushXml.js"></script>
+<link type="text/css" rel="stylesheet" href="code/shCore.css">
+<link type="text/css" rel="stylesheet" href="code/shThemeDefault.css">
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+		$(function () {
+    // Line wrap back
+    var shLineWrap = function () {
+        $('.syntaxhighlighter').each(function () {
+            // Fetch
+            var $sh = $(this),
+                $gutter = $sh.find('td.gutter'),
+                $code = $sh.find('td.code')
+                ;
+            // Cycle through lines
+            $gutter.children('.line').each(function (i) {
+                // Fetch
+                var $gutterLine = $(this),
+                    $codeLine = $code.find('.line:nth-child(' + (i + 1) + ')')
+                    ;
+                //alert($gutterLine);
+                // Fetch height
+                var height = $codeLine.height() || 0;
+                if (!height) {
+                    height = 'auto';
+                }
+                else {
+                    height = height += 'px';
+                    //alert(height);
+                }
+                // Copy height over
+                $gutterLine.attr('style', 'height: ' + height + ' !important'); // fix by Edi, for JQuery 1.7+ under Firefox 15.0
+                console.debug($gutterLine.height(), height, $gutterLine.text(), $codeLine);
+            });
+        });
+    };
+    // Line wrap back when syntax highlighter has done it's stuff
+    var shLineWrapWhenReady = function () {
+        if ($('.syntaxhighlighter').length === 0) {
+            setTimeout(shLineWrapWhenReady, 10);
+        }
+        else {
+            shLineWrap();
+        }
+    };
+    // Fire
+    shLineWrapWhenReady();});
+	</script>
+  <style type="text/css">
+  .syntaxhighlighter {
+  width: 100% !important;
+  margin: 1em 0 1em 0 !important;
+  position: relative !important;
+  overflow: auto !important;
+  font-size: 1em !important;
+  padding: 0 !important;
+}
+body .syntaxhighlighter .line{
+    white-space: pre-wrap !important;}
+.syntaxhighlighter{width:100%!important;margin:.3em 0 .3em 0!important;position:relative!important;overflow:auto!important;background-color:#f5f5f5!important;border:1px solid #ccc!important;word-break:break-all;}
+.syntaxhighlighter table td.gutter .alt1,.syntaxhighlighter table td.gutter .alt2{padding: 0 0.3em 0 0.5em !important;
+word-wrap:nowrap!important; /* Internet Explorer 5.5+ */
+white-space: pre-wrap!important; /* Firefox */}
+
+                        </style>
+
+	
+</body>
+</html>
